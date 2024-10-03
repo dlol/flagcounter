@@ -1,0 +1,7 @@
+services:
+  flagcounter:
+    image: flagcounter:latest
+    container_name: flagcounter
+    restart: unless-stopped
+    ports:
+      - 5679:5679

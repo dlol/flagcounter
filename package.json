@@ -1,0 +1,23 @@
+{
+  "name": "flagcounter",
+  "author": "dw <dw@konakona.moe>",
+  "description": "self-hosted flag counter and anime counter",
+  "main": "src/index.js",
+  "version": "2.1.0",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "image-size": "^0.8.3",
+    "mime-types": "^2.1.35",
+    "sqlite3": "^5.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.konakona.moe/dw/flagcounter"
+  },
+  "scripts": {
+    "test": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "license": "MIT"
+}

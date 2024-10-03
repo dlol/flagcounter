@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Aleo";
+    src: url('../aleo.ttf');
+}
+
+* {
+    font-family: "Aleo";
+    color: #cdd6f4;
+}
+
+body {
+    background-color: #181825;
+}

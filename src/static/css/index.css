@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Aleo";
+    src: url('../aleo.ttf');
+}
+
+* {
+    font-family: "Aleo";
+    color: #cdd6f4;
+}
+
+div.flag-counter {
+    padding: 5px;
+    background-color: #18182570;
+    border: 1px #f38ba8 dashed;
+    width: 100%;
+    min-width: 200px;
+    max-width: 500px;
+    min-height: 180px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181825;
+}
+
+p > i {
+    color: #45475a;
+}
+
+p > i > code {
+    color: #949cbb;
+}
+
+p {
+    max-width: 700px;
+    text-align: justify;
+}
+
+code {
+    background: #313244;
+    color: #cdd6f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-style: normal;
+}
