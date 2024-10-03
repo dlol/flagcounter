@@ -6,4 +6,4 @@ services:
     volumes:
       - ./db:/flagcounter/db
     ports:
-      - 5679:5679
+      - 127.0.0.1:5679:5679
