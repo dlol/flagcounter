@@ -42,8 +42,6 @@ app.get(root, async (req, res) => {
         title,
         root
     })
-
-    pushDB(req)
 })
 
 app.get(`${root}counter`, async (req, res) => {
@@ -72,8 +70,6 @@ app.get(`${root}counter`, async (req, res) => {
             })
         }
     })
-
-    pushDB(req)
 })
 
 app.get(`${root}flags`, async (req, res) => {
@@ -103,8 +99,6 @@ app.use((req, res, next) => {
         desc: 'You have probably lost yourself... This page does not exist.',
         root
     })
-
-    pushDB(req)
 })
 
 app.listen(port, () => {
