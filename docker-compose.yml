@@ -3,5 +3,7 @@ services:
     image: flagcounter:latest
     container_name: flagcounter
     restart: unless-stopped
+    volumes:
+      - ./db:/flagcounter/db
     ports:
       - 5679:5679

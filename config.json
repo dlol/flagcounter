@@ -1,6 +1,6 @@
 {
     "title": "konakona.moe's flagcounter",
-    "db": "flagcounter.db",
+    "db": "db/flagcounter.db",
     "root": "/flagcounter/",
     "cloudflare": false,
     "port": 5679
