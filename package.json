@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.konakona.moe/dw/flagcounter"
+    "url": "https://git.dxxwx.cc/dw/flagcounter"
   },
   "scripts": {
     "test": "node --watch src/index.js",

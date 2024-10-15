@@ -1,8 +1,9 @@
 const sqlite3 = require('sqlite3')
 
 const config = require('../../config.json')
-const cloudflare = config.cloudflare
-const db_file = config.db
+const db_file = process.env.FC_DB_FILE || config.db
+const cloudflare = process.env.FC_CLOUDFLARE || config.cloudflare
+
 const db = new sqlite3.Database(db_file)
 
 function pushDB(req) {

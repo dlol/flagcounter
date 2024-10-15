@@ -7,12 +7,11 @@ const themify = require('./lib/themify')
 const pushDB = require('./lib/push')
 
 const config = require('../config.json')
-console.log('Your config.json file:')
-console.log(config)
-const root = config.root
-const port = config.port
-const title = config.title
-const db_file = config.db
+const root = process.env.FC_ROOT || config.root
+const port = process.env.FC_PORT || config.port
+const title = process.env.FC_TITLE || config.title
+const db_file = process.env.FC_DB_FILE || config.db
+const cloudflare = process.env.FC_CLOUDFLARE || config.cloudflare
 
 const app = express()
 app.set('view engine', 'ejs')
