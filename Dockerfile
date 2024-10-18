@@ -9,6 +9,11 @@ RUN apt-get update -y && \
 
 WORKDIR /flagcounter
 COPY . .
+RUN mkdir static-tmp
+RUN mv /flagcounter/src/static/* /flagcounter/static-tmp
+
 RUN npm install
 
-CMD ["npm", "start"]
+RUN chmod +x /flagcounter/entrypoint.sh
+
+ENTRYPOINT ["/bin/sh", "-c", "/flagcounter/entrypoint.sh"]

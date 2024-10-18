@@ -1,8 +1,8 @@
 const sqlite3 = require('sqlite3')
 
-const config = require('../../config.json')
-const db_file = process.env.FC_DB_FILE || config.db
-const cloudflare = process.env.FC_CLOUDFLARE || config.cloudflare
+const config = require(process.argv.includes('--docker') ? '../../config/config.json' : '../../config.json')
+const db_file = process.argv.includes('--docker') ? 'db/flagcounter.db' : 'flagcounter.db'
+const cloudflare = config.cloudflare
 
 const db = new sqlite3.Database(db_file)
 

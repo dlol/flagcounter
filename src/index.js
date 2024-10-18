@@ -1,17 +1,15 @@
 const express = require('express')
 const sqlite3 = require('sqlite3')
-const fs = require('fs')
 const path = require('path')
 
 const themify = require('./lib/themify')
 const pushDB = require('./lib/push')
 
-const config = require('../config.json')
-const root = process.env.FC_ROOT || config.root
-const port = process.env.FC_PORT || config.port
-const title = process.env.FC_TITLE || config.title
-const db_file = process.env.FC_DB_FILE || config.db
-const cloudflare = process.env.FC_CLOUDFLARE || config.cloudflare
+const config = require(process.argv.includes('--docker') ? '../config/config.json' : '../config.json')
+const root = config.root
+const port = config.port
+const title = config.title
+const db_file = process.argv.includes('--docker') ? 'db/flagcounter.db' : 'flagcounter.db'
 
 const app = express()
 app.set('view engine', 'ejs')

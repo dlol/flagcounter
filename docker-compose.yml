@@ -3,13 +3,8 @@ services:
     image: flagcounter:latest
     container_name: flagcounter
     restart: unless-stopped
-    environment:
-      - FC_ROOT=/flagcounter-iframe/
-      - FC_PORT=5679
-      - FC_TITLE="Flag Counter"
-      - FC_DB_FILE=data/flagcounter.db
-      - FC_CLOUDFLARE=false
     volumes:
-      - ./data:/flagcounter/data
+      - ./config:/flagcounter/config
+      - ./db:/flagcounter/db
     ports:
       - 127.0.0.1:5679:5679

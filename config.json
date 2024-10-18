@@ -1,6 +1,5 @@
 {
     "title": "Flag Counter",
-    "db": "flagcounter.db",
     "root": "/flagcounter/",
     "cloudflare": false,
     "port": 5679
