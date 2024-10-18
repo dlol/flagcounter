@@ -4,6 +4,7 @@ services:
     container_name: flagcounter
     restart: unless-stopped
     volumes:
+      - ./static:/flagcounter/src/static
       - ./config:/flagcounter/config
       - ./db:/flagcounter/db
     ports:
